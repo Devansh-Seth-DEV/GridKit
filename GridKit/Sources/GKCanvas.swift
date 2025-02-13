@@ -81,12 +81,17 @@ public class GKCanvas {
     }
     
     /// Returns the cell at given index if exists
-    public func getCell(at indexPath: IndexPath) -> GKCell? {
+    public func getCell(at indexPath: IndexPath?) -> GKCell? {
+        guard let indexPath = indexPath else { return nil }
         return gkCells[indexPath]
     }
     
     public func getCell(atRow row: Int, column: Int) -> GKCell? {
         return getCell(at: IndexPath(row: row, section: column))
+    }
+    
+    public func getIndexPath(ofCell cell: GKCell) -> IndexPath {
+        return IndexPath(row: cell.row, section: cell.column)
     }
     
     /// Returns the index of cell at a point if exists
@@ -145,6 +150,22 @@ public class GKCanvas {
         }
     }
     
+    public func populateCells(at indexes: [(row: Int, col: Int)]) {
+        for pair in indexes {
+            insertCell(atRow: pair.row, column: pair.col)
+        }
+    }
+    
+    public func populateCells(if condition: ((Int, Int) -> Bool)) {
+        for row in 0..<gkspec.rows {
+            for column in 0..<gkspec.columns {
+                if condition(row, column) {
+                    insertCell(atRow: row, column: column)
+                }
+            }
+        }
+    }
+    
     /// Inserts a cell at a specific row and column.
     public func insertCell(atRow row: Int, column: Int, file: StaticString = #file, line: UInt = #line) {
         guard row>=0, column>=0, row < gkspec.rows, column < gkspec.columns else {
@@ -182,6 +203,22 @@ public class GKCanvas {
         gkCells.removeValue(forKey: indexPath)
     }
     
+    public func removeCells(at indexes: [(row: Int, col: Int)]) {
+        for pair in indexes {
+            removeCell(atRow: pair.row, column: pair.col)
+        }
+    }
+    
+    public func removeCells(if condition: ((Int, Int) -> Bool)) {
+        for row in 0..<gkspec.rows {
+            for col in 0..<gkspec.columns {
+                if condition(row, col) {
+                    removeCell(atRow: row, column: col)
+                }
+            }
+        }
+    }
+    
     /// Erase all cells from the canvas.
     public func erase() {
         gkCells.forEach { (_, cell) in
@@ -197,13 +234,13 @@ public class GKCanvas {
     }
     
     /// Updates cell properties at a given position
-    public func updateCell(atRow row: Int, column: Int, update: (inout GKCell) -> Void) {
+    public func updateCell(atRow row: Int, column: Int, update: ((inout GKCell) -> Void)?) {
         let indexPath = IndexPath(row: row, section: column)
         guard var cell = gkCells[indexPath] else {
             print("Warning: Attempted to update block at (\(row), \(column)), but it's out of bounds! Valid range: 0-\(gkspec.rows-1), 0-\(gkspec.columns-1)")
             return
         }
-        update(&cell)
+        update?(&cell)
         gkCells[indexPath] = cell
     }
 }
