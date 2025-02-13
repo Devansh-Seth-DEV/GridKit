@@ -81,7 +81,7 @@ A cell within the grid, which can be customized based on the application’s nee
 * `view: UIView` - View of the cell
 
 
-### 4. `GKLayoutView`
+### 4. GKLayoutView
 
 A UIView subclass that integrates with `GKCanvas` to display and manage grid layouts.
 
@@ -127,6 +127,7 @@ init(spec: GKSpec, in superview: UIView, masksToBounds: Bool = true)
 ## Usage Example
 
 ```swift
+import UIKit
 import GridKit
 
 let gkspec = GKSpec(
@@ -143,25 +144,27 @@ let gkspec = GKSpec(
 )
 
 let gklayout = GKLayoutView(spec: gkspec, in: view)
-gklayout.didCellTap = { cell in
-    print("Tapped cell at row \(cell.row), column \(cell.column)")
+gklayout.allowPathDrawing = true
+        
+gklayout.updateCellOnTrace = { cell in
+  cell.view.backgroundColor = self.gklayout.pathStrokeColor?.withAlphaComponent(0.5)
 }
-
+gklayout.updateCellOnTraceEnd = { cell in
+  cell.view.backgroundColor = self.gklayout.canvas.gkspec.cellColor
+}
+        
 gklayout.populate()
-
-for row in 0..<gklayout.rows {
-    for column in 0..<gklayout.columns {
-        if (row == 0 && column < 4) ||
-            ((row == 1 || row == 2) && (column < 2 || column == 3 || column > 4)) ||
-            (row >= 3 && column > 5) ||
-            (row == 4 && (column == 1 || column == 3 || column == 4)) ||
-            (row == 5 && (column > 0 && column < 5)) ||
-            (row == 6 && column == 1)
-        {
-            self.gklayout.canvas.removeCell(atRow: row, column: column)
-        }
-    }
-}
+        
+gklayout.removeCells(if: { (row, column) in
+  return (
+    (row == 0 && column < 4) ||
+    ((row == 1 || row == 2) && (column < 2 || column == 3 || column > 4)) ||
+    (row >= 3 && column > 5) ||
+    (row == 4 && (column == 1 || column == 3 || column == 4)) ||
+    (row == 5 && (column > 0 && column < 5)) ||
+    (row == 6 && column == 1)
+  )
+})
 
 ```
 
