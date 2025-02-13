@@ -130,7 +130,7 @@ for row in 0..<gklayout.rows {
 
 ## License
 
-GridKit is available under the MIT license. See LICENSE for more details.
+GridKit is available under the MIT license. See [LICENSE](LICENSE) for more details.
  
 ### Group
 
