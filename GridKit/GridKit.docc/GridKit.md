@@ -1,4 +1,4 @@
-# ``GridKit Framework Documentation``
+# GridKit Framework Documentation
 
 ## Overview
 
@@ -22,6 +22,7 @@ Alternatively, you can manually add the source files to your project.
 * `rows: Int` - Number of rows in the grid.
 * `columns: Int` - Number of columns in the grid.
 * `cellSize: CGFloat` - The size of each grid cell.
+* `interCellInsets: CGFloat` - The spacing between the cells
 
 
 ### 2. `GKCanvas`
@@ -31,15 +32,30 @@ Alternatively, you can manually add the source files to your project.
 **Methods:**
 
 * `attachLayoutView(_ layoutView: GKLayoutView)` - Links the canvas to a layout view.
-
+  
 * `getSize() -> CGSize` - Returns the computed size of the canvas.
-
+  
+* `getCell(atRow row: Int, column: Int)` - Returns the cell at a given position.
+  
+* `getIndexPath(forCellAt point: CGPoint) -> IndexPath?` - Retrieves the index path of cell at a given touch point.
+  
 * `getCell(atPoint point: CGPoint) -> GKCell?` - Retrieves the cell at a given touch point.
-
+  
+* `getAllCells() -> [GKCell]` - Returns all the cells allocated in canvas.
+  
+* `layoutCanvasCells()` - Refreshes the canvas layout.
+  
 * `populate()` - Populates the grid with cells.
-
+  
+* `insertCell(atRow row: Int, column: Int)` - Inserts a cell in canvas at specific row and column.
+  
+* `removeCell(atRow row: Int, column: Int)` - Removes a cell from canvas at specific row and column.
+  
 * `erase()` - Clears the canvas.
-
+  
+* `hasCell(atRow row: Int, column: Int)` - Checks if the cell exists at given position.
+  
+* `updateCell(atRow row: Int, column: Int, update: (inout GKCell) -> Void)` - Updates the cell property at given position.
 
 ### 3. `GKCell`
 
@@ -51,6 +67,8 @@ A cell within the grid, which can be customized based on the application’s nee
 
 * `column: Int` - The column index of the cell.
 
+* `view: UIView` - View of the cell
+
 
 ### 4. `GKLayoutView`
 
@@ -58,7 +76,7 @@ A UIView subclass that integrates with `GKCanvas` to display and manage grid lay
 
 **Initializers:**
 ```swift
-    init(spec: GKSpec, in superview: UIView)
+init(spec: GKSpec, in superview: UIView)
 ```
 
 **Methods:**
