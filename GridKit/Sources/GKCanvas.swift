@@ -1,5 +1,5 @@
 //
-//  GKCanvas 2.swift
+//  GKCanvas.swift
 //  GridKitUsage
 //
 //  Created by Devansh Seth on 13/02/25.

@@ -1,5 +1,5 @@
 //
-//  GridView.swift
+//  GKLayoutView.swift
 //  GridKit
 //
 //  Created by Devansh Seth on 12/02/25.
