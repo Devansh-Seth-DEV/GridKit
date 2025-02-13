@@ -6,15 +6,25 @@ GridKit is a flexible and customizable grid-based UI framework for iOS, designed
 
 ## Installation
 
-To integrate GridKit into your project, you can use Swift Package Manager (SPM)
+![Install Framework](https://img.shields.io/badge/Install-GridKit-brightgreen?style=for-the-badge)
+
+Install the framework using Github's `svn export`
 ```sh
-.package(url: "https://github.com/your-repo/GridKit.git", from: "1.0.0")
+svn export https://github.com/Devansh-Seth-DEV/GridKit/trunk/GridKit.xcframework
 ```
-Alternatively, you can manually add the source files to your project.
+
+![Integrate Framework](https://img.shields.io/badge/Integrate-GridKit-brightgreen?style=for-the-badge)
+
+To integrate **GridKit** into your project, you can Embed and Link the Framework
+1. Select your project in Xcode.
+2. Go to the Target → General tab.
+3. Scroll down to Frameworks, Libraries, and Embedded Content.
+4. Click the + button and add **GridKit XCFramework**.
+5. Set Embed to "Embed & Sign".
 
 ## Components
 
-### 1. `GKSpec`
+### 1. GKSpec
 
 `GKSpec` defines the specifications of the grid, including the number of rows, columns, and cell size.
 
@@ -25,7 +35,7 @@ Alternatively, you can manually add the source files to your project.
 * `interCellInsets: CGFloat` - The spacing between the cells
 
 
-### 2. `GKCanvas`
+### 2. GKCanvas
 
 `GKCanvas` represents the main grid structure and handles cell layout and interactions.
 
@@ -57,7 +67,7 @@ Alternatively, you can manually add the source files to your project.
   
 * `updateCell(atRow row: Int, column: Int, update: (inout GKCell) -> Void)` - Updates the cell property at given position.
 
-### 3. `GKCell`
+### 3. GKCell
 
 A cell within the grid, which can be customized based on the application’s needs.
 
@@ -76,14 +86,40 @@ A UIView subclass that integrates with `GKCanvas` to display and manage grid lay
 
 **Initializers:**
 ```swift
-init(spec: GKSpec, in superview: UIView)
+init(spec: GKSpec, in superview: UIView, masksToBounds: Bool = true)
 ```
 
-**Methods:**
+**Properties:**
 
+* `allowPathDrawing` - A boolean property to activate the path drawing on touching the cell
+
+* `pathLineWidth: CGFloat` - Width of the path line
+
+* `pathStrokeColor: UIColor?` - Path Stroke Color when drawing the path
+
+* `pathLayers: [CAShapeLayer]` - Array of traced path when a cell gets traced
+
+* `tracedCells: [IndexPath]` - Store all the cells which are traced
+
+* `updateCellOnTrace: ((GKCell) -> Void)?` - Closure to call when cells are traced while drawing the path (touch move)
+
+* `updateCellOnTraceEnd: ((GKCell) -> Void)?` - Closre to call when lift up the touch from the screen (touch end)
+
+
+**Methods:**
 * `resizeCanvas(to size: CGSize)` - Adjusts the canvas size dynamically.
 
 * `populate()` - Populates the grid with cells.
+
+* `populteCells(at indexes: [(row: Int, col: Int)])` - Populates the grid with the given positions
+
+* `populteCells(if if condition: ((Int, Int) -> Bool))` - Populates the grid at row and column in the condition if it satisfies
+
+* `removeCell(atRow row: Int, column: Int)` - Removes the cell from the grid at specific position
+
+* `removeCells(at indexes: [(row: Int, col: Int)])` - Removes the cell from the grid with the given positions
+
+* `removeCells(if if condition: ((Int, Int) -> Bool))` - Removes the cell from the grid at row and column in the condition if it satisfies
 
 * `eraseCanvas()` - Clears all cells from the grid.
 
