@@ -4,7 +4,9 @@ DerivedData/
 *.xcodeproj/project.xcworkspace/
 *.xcodeproj/xcuserdata/
 *.xcworkspace/xcuserdata/
+
 .DS_Store
+
 build/
 *.xcframework.zip
 Pods/
@@ -15,3 +17,7 @@ xcuserdata
 
 DerivedData/
 *.xcodeproj
+
+#Framework files
+build_xcframework.sh
+archives/
