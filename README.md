@@ -8,7 +8,7 @@ GridKit is a flexible and customizable grid-based UI framework for iOS, designed
 
 ![Install Framework](https://img.shields.io/badge/Install-GridKit-brightgreen?style=for-the-badge)
 
-Install the framework using Github's `svn export`
+Install the framework
 ```sh
 curl -sSL https://gist.githubusercontent.com/Devansh-Seth-DEV/c1ea5abd3272cd166d4bf0e10683a7a7/raw/bfb7c62556470a1328590f6df27f7e14b7522540/gk_install.sh | bash
 ```
