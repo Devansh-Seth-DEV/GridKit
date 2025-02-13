@@ -1,0 +1,10 @@
+# Ignore build files
+DerivedData/
+*.xcworkspace
+*.xcodeproj/project.xcworkspace/
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+build/
+*.xcframework.zip
+Pods/
+
