@@ -1,0 +1,6 @@
+framework module GridKit {
+  umbrella header "GridKit.h"
+  export *
+
+  module * { export * }
+}
