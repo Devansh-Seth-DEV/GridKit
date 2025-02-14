@@ -13,7 +13,7 @@ GridKit is a flexible and customizable grid-based UI framework for iOS, designed
 
 Install the framework
 ```sh
-curl -sSL https://gist.githubusercontent.com/Devansh-Seth-DEV/c1ea5abd3272cd166d4bf0e10683a7a7/raw/bfb7c62556470a1328590f6df27f7e14b7522540/gk_install.sh | bash
+curl -sSL https://gist.githubusercontent.com/Devansh-Seth-DEV/c1ea5abd3272cd166d4bf0e10683a7a7/raw/0b453245661ee61f24b7b2657dca22b1e8122aea/gk_install.sh | bash
 ```
 
 
