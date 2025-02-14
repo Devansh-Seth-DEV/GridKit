@@ -1,3 +1,5 @@
+![GridKit Logo](GridKit/Resources/logo.jpg)
+
 # GridKit Framework Documentation
 
 ## Overview
