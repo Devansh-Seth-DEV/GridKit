@@ -187,7 +187,7 @@ open class GKLayoutView: UIView {
     
     public func populate() { canvas.populate() }
     
-    public func populteCells(at indexes: [(row: Int, col: Int)]) {
+    public func populateCells(at indexes: [(row: Int, col: Int)]) {
         canvas.populateCells(at: indexes)
     }
     
