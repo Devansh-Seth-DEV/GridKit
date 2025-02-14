@@ -133,42 +133,45 @@ init(spec: GKSpec, in superview: UIView, masksToBounds: Bool = true)
 import UIKit
 import GridKit
 
-let gkspec = GKSpec(
-    rows: 7,
-    columns: 8,
-    cellSize: 40,
-    interCellInsets: 2,
-    cellColor: .white,
-    canvasColor: .clear,
-    cellBorderWidth: 2,
-    cellBorderColor: .systemTeal,
-    cellCornerRadius: 8,
-    canvasCornerRadius: 24
-)
+override func viewDidLoad() {
+  super.viewDidLoad()
 
-let gklayout = GKLayoutView(spec: gkspec, in: view)
-gklayout.allowPathDrawing = true
-        
-gklayout.updateCellOnTrace = { cell in
-  cell.view.backgroundColor = self.gklayout.pathStrokeColor?.withAlphaComponent(0.5)
-}
-gklayout.updateCellOnTraceEnd = { cell in
-  cell.view.backgroundColor = self.gklayout.canvas.gkspec.cellColor
-}
-        
-gklayout.populate()
-        
-gklayout.removeCells(if: { (row, column) in
-  return (
-    (row == 0 && column < 4) ||
-    ((row == 1 || row == 2) && (column < 2 || column == 3 || column > 4)) ||
-    (row >= 3 && column > 5) ||
-    (row == 4 && (column == 1 || column == 3 || column == 4)) ||
-    (row == 5 && (column > 0 && column < 5)) ||
-    (row == 6 && column == 1)
+  let gkspec = GKSpec(
+      rows: 7,
+      columns: 8,
+      cellSize: 40,
+      interCellInsets: 2,
+      cellColor: .white,
+      canvasColor: .clear,
+      cellBorderWidth: 2,
+      cellBorderColor: .systemTeal,
+      cellCornerRadius: 8,
+      canvasCornerRadius: 24
   )
-})
-
+  
+  let gklayout = GKLayoutView(spec: gkspec, in: view)
+  gklayout.allowPathDrawing = true
+          
+  gklayout.updateCellOnTrace = { cell in
+    cell.view.backgroundColor = gklayout.pathStrokeColor?.withAlphaComponent(0.5)
+  }
+  gklayout.updateCellOnTraceEnd = { cell in
+    cell.view.backgroundColor = gklayout.canvas.gkspec.cellColor
+  }
+          
+  gklayout.populate()
+          
+  gklayout.removeCells(if: { (row, column) in
+    return (
+      (row == 0 && column < 4) ||
+      ((row == 1 || row == 2) && (column < 2 || column == 3 || column > 4)) ||
+      (row >= 3 && column > 5) ||
+      (row == 4 && (column == 1 || column == 3 || column == 4)) ||
+      (row == 5 && (column > 0 && column < 5)) ||
+      (row == 6 && column == 1)
+    )
+  })
+}
 ```
 
 ## DEMO
