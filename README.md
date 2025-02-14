@@ -168,6 +168,9 @@ gklayout.removeCells(if: { (row, column) in
 
 ```
 
+## DEMO
+![Demo](https://github.com/Devansh-Seth-DEV/GridKit/blob/main/GridKit/GridKit.docc/Resources/demo.gif)
+
 ## License
 
 GridKit is available under the MIT license. See [LICENSE](LICENSE) for more details.
