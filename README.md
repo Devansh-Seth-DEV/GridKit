@@ -60,10 +60,18 @@ To integrate **GridKit** into your project, you can Embed and Link the Framework
 * `layoutCanvasCells()` - Refreshes the canvas layout.
   
 * `populate()` - Populates the grid with cells.
+
+* `populateCells(at indexes: [(row: Int, col: Int)])` - Populates the grid with the given positions
+
+* `populateCells(if condition: ((Int, Int) -> Bool))` - Populates the grid at row and column in the condition if it satisfies
   
 * `insertCell(atRow row: Int, column: Int)` - Inserts a cell in canvas at specific row and column.
   
 * `removeCell(atRow row: Int, column: Int)` - Removes a cell from canvas at specific row and column.
+
+* `removeCells(at indexes: [(row: Int, col: Int)])` - Removes the cell from the grid with the given positions
+
+* `removeCells(if condition: ((Int, Int) -> Bool))` - Removes the cell from the grid at row and column in the condition if it satisfies
   
 * `erase()` - Clears the canvas.
   
@@ -90,12 +98,19 @@ A UIView subclass that integrates with `GKCanvas` to display and manage grid lay
 
 **Initializers:**
 ```swift
-init(spec: GKSpec, in superview: UIView, masksToBounds: Bool = true)
+init(
+    spec: GKSpec,               //GK Specifications of layout view
+    in superview: UIView,       //View in which layout is placed
+    masksToBounds: Bool = true  //Property which make sure layout size always bounds under superview size
+)
 ```
+
 
 **Properties:**
 
 * `allowPathDrawing` - A boolean property to activate the path drawing on touching the cell
+
+* `didTapCell` - Closure to call when a cell is tapped, gets called only if `allowPathDrawing` is set to `false`) 
 
 * `pathLineWidth: CGFloat` - Width of the path line
 
@@ -111,21 +126,23 @@ init(spec: GKSpec, in superview: UIView, masksToBounds: Bool = true)
 
 
 **Methods:**
+
 * `resizeCanvas(to size: CGSize)` - Adjusts the canvas size dynamically.
 
-* `populate()` - Populates the grid with cells.
+* `populate()` - Calls GKCanvas `populate()` method
 
-* `populteCells(at indexes: [(row: Int, col: Int)])` - Populates the grid with the given positions
+* `populateCells(at indexes: [(row: Int, col: Int)])` - Calls GKCanvas `populateCells(at:)` method
 
-* `populteCells(if if condition: ((Int, Int) -> Bool))` - Populates the grid at row and column in the condition if it satisfies
+* `populateCells(if condition: ((Int, Int) -> Bool))` - Calls GKCanvas `populateCells(if:)` method
 
-* `removeCell(atRow row: Int, column: Int)` - Removes the cell from the grid at specific position
+* `removeCell(atRow row: Int, column: Int)` - Calls GKCanvas `removeCell(atRow:column)` method
 
-* `removeCells(at indexes: [(row: Int, col: Int)])` - Removes the cell from the grid with the given positions
+* `removeCells(at indexes: [(row: Int, col: Int)])` - Calls GKCanvas `removeCells(at:)` method
 
-* `removeCells(if if condition: ((Int, Int) -> Bool))` - Removes the cell from the grid at row and column in the condition if it satisfies
+* `removeCells(if condition: ((Int, Int) -> Bool))` - Calls GKCanvas `removeCells(if:)` method
 
-* `eraseCanvas()` - Clears all cells from the grid.
+* `eraseCanvas()` - Calls GKCanvas `erase()` method
+
 
 ## Usage Example
 
