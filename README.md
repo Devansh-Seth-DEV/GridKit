@@ -556,7 +556,7 @@ func updateTracedCell(
 ```
 
 
-## Usage Example
+## How To Use
 
 To create the [GKLayoutView](#gklayoutview) first create the specifications for the canvas
 ```swift
