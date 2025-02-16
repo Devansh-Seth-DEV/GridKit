@@ -580,10 +580,13 @@ let gkspec = GKSpec(
 
 Now as we've created the canvas specifications let's create `GKLayoutView` for our View Controller. By default canvas is placed at the center of superview
 ```swift
-let gklayout = GKLayoutView(
-    spec: gkspec,       // Canvas specifications
-    in: view            // Superview in which gklayout gets displayed
-)
+override func viewDidLoad() {
+  super.viewDidLoad()
+  let gklayout = GKLayoutView(
+      spec: gkspec,       // Canvas specifications
+      in: view            // Superview in which gklayout gets displayed
+  )
+}
 ```
 
 Now we've created our GKLayoutView we can place cells in it, to place cells in it call `populate()` method and RUN the app
