@@ -77,7 +77,11 @@ open class GKCell {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
   @_Concurrency.MainActor @preconcurrency public func resizeCanvas(to size: CoreFoundation.CGSize)
   @_Concurrency.MainActor @preconcurrency public func populate()
+<<<<<<< HEAD
   @_Concurrency.MainActor @preconcurrency public func populteCells(at indexes: [(row: Swift.Int, col: Swift.Int)])
+=======
+  @_Concurrency.MainActor @preconcurrency public func populateCells(at indexes: [(row: Swift.Int, col: Swift.Int)])
+>>>>>>> 08ecc4cce6cf51eef8db0591c8622f4faf709b83
   @_Concurrency.MainActor @preconcurrency public func populateCells(if condition: ((Swift.Int, Swift.Int) -> Swift.Bool))
   @_Concurrency.MainActor @preconcurrency public func removeCell(atRow row: Swift.Int, column: Swift.Int)
   @_Concurrency.MainActor @preconcurrency public func removeCells(at indexes: [(row: Swift.Int, col: Swift.Int)])

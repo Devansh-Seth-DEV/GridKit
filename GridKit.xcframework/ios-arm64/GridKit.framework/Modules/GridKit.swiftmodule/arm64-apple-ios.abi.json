@@ -2890,8 +2890,13 @@
           },
           {
             "kind": "Function",
+<<<<<<< HEAD
             "name": "populteCells",
             "printedName": "populteCells(at:)",
+=======
+            "name": "populateCells",
+            "printedName": "populateCells(at:)",
+>>>>>>> 08ecc4cce6cf51eef8db0591c8622f4faf709b83
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2927,8 +2932,13 @@
               }
             ],
             "declKind": "Func",
+<<<<<<< HEAD
             "usr": "s:7GridKit12GKLayoutViewC12populteCells2atySaySi3row_Si3coltG_tF",
             "mangledName": "$s7GridKit12GKLayoutViewC12populteCells2atySaySi3row_Si3coltG_tF",
+=======
+            "usr": "s:7GridKit12GKLayoutViewC13populateCells2atySaySi3row_Si3coltG_tF",
+            "mangledName": "$s7GridKit12GKLayoutViewC13populateCells2atySaySi3row_Si3coltG_tF",
+>>>>>>> 08ecc4cce6cf51eef8db0591c8622f4faf709b83
             "moduleName": "GridKit",
             "declAttributes": [
               "Preconcurrency",
@@ -4589,34 +4599,35 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/devanshseth\/XCode Projects\/GridKit\/GridKit\/Sources\/GKCanvas.swift",
+      "filePath": "\/Users\/batch-2\/XCode Project\/Custom Frameworks\/GridKit\/GridKit\/Sources\/GKCanvas.swift",
       "kind": "IntegerLiteral",
       "offset": 1281,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devanshseth\/XCode Projects\/GridKit\/GridKit\/Sources\/GKCanvas.swift",
+      "filePath": "\/Users\/batch-2\/XCode Project\/Custom Frameworks\/GridKit\/GridKit\/Sources\/GKCanvas.swift",
       "kind": "IntegerLiteral",
       "offset": 1555,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devanshseth\/XCode Projects\/GridKit\/GridKit\/Sources\/GKCanvas.swift",
+      "filePath": "\/Users\/batch-2\/XCode Project\/Custom Frameworks\/GridKit\/GridKit\/Sources\/GKCanvas.swift",
       "kind": "IntegerLiteral",
       "offset": 1902,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/devanshseth\/XCode Projects\/GridKit\/GridKit\/Sources\/GKCanvas.swift",
+      "filePath": "\/Users\/batch-2\/XCode Project\/Custom Frameworks\/GridKit\/GridKit\/Sources\/GKCanvas.swift",
       "kind": "Dictionary",
       "offset": 2036,
       "length": 3,
       "value": "[]"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/devanshseth\/XCode Projects\/GridKit\/GridKit\/Sources\/GKLayoutView.swift",
       "kind": "IntegerLiteral",
       "offset": 475,
@@ -4661,6 +4672,52 @@
     {
       "filePath": "\/Users\/devanshseth\/XCode Projects\/GridKit\/GridKit\/Sources\/GKSpec.swift",
       "kind": "IntegerLiteral",
+=======
+      "filePath": "\/Users\/batch-2\/XCode Project\/Custom Frameworks\/GridKit\/GridKit\/Sources\/GKLayoutView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 475,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/batch-2\/XCode Project\/Custom Frameworks\/GridKit\/GridKit\/Sources\/GKLayoutView.swift",
+      "kind": "Array",
+      "offset": 576,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/batch-2\/XCode Project\/Custom Frameworks\/GridKit\/GridKit\/Sources\/GKLayoutView.swift",
+      "kind": "Array",
+      "offset": 621,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/batch-2\/XCode Project\/Custom Frameworks\/GridKit\/GridKit\/Sources\/GKLayoutView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 775,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/batch-2\/XCode Project\/Custom Frameworks\/GridKit\/GridKit\/Sources\/GKLayoutView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 937,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/batch-2\/XCode Project\/Custom Frameworks\/GridKit\/GridKit\/Sources\/GKLayoutView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1130,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/batch-2\/XCode Project\/Custom Frameworks\/GridKit\/GridKit\/Sources\/GKSpec.swift",
+      "kind": "IntegerLiteral",
+>>>>>>> 08ecc4cce6cf51eef8db0591c8622f4faf709b83
       "offset": 1022,
       "length": 1,
       "value": "0"

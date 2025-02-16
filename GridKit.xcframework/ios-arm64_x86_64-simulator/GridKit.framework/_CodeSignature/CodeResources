@@ -10,15 +10,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		3kjDECxiqbAadSRnju6C8cnUz8Q=
+		eMvhNX5TnNyz3LpWeO1rwkDNap4=
 		</data>
 		<key>Modules/GridKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
+<<<<<<< HEAD
 		nGAkvQ8AxU99DK49JdSkjLd1mLE=
 		</data>
 		<key>Modules/GridKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
 		MW3R4PQwFPva4bTKJvc9116IhTw=
+=======
+		2BktVPdh1mTklxDewirrEBD+7V0=
+		</data>
+		<key>Modules/GridKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		b0or0ySjRLltdZD4HliPh5EObBU=
+>>>>>>> 08ecc4cce6cf51eef8db0591c8622f4faf709b83
 		</data>
 		<key>Modules/GridKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -26,6 +34,7 @@
 		</data>
 		<key>Modules/GridKit.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
+<<<<<<< HEAD
 		MW3R4PQwFPva4bTKJvc9116IhTw=
 		</data>
 		<key>Modules/GridKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
@@ -39,6 +48,21 @@
 		<key>Modules/GridKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
 		9IiljT/hsLtSqdkGJ3mLamkqzfE=
+=======
+		b0or0ySjRLltdZD4HliPh5EObBU=
+		</data>
+		<key>Modules/GridKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
+		<data>
+		mN3tFldtdfGX3HtqanTORHrrd78=
+		</data>
+		<key>Modules/GridKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<data>
+		2BktVPdh1mTklxDewirrEBD+7V0=
+		</data>
+		<key>Modules/GridKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		XCgvOu7lqulkL0lpfWFQV75VghQ=
+>>>>>>> 08ecc4cce6cf51eef8db0591c8622f4faf709b83
 		</data>
 		<key>Modules/GridKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -46,11 +70,19 @@
 		</data>
 		<key>Modules/GridKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
+<<<<<<< HEAD
 		9IiljT/hsLtSqdkGJ3mLamkqzfE=
 		</data>
 		<key>Modules/GridKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
 		JgkplfLHMKsIXyUuicII+2JA+6E=
+=======
+		XCgvOu7lqulkL0lpfWFQV75VghQ=
+		</data>
+		<key>Modules/GridKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
+		<data>
+		GXl+9U9Zk2vlq2l+UzCi+qcvHyw=
+>>>>>>> 08ecc4cce6cf51eef8db0591c8622f4faf709b83
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -70,14 +102,22 @@
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< HEAD
 			ZfMN/sBkOs7iGMfBH1lsWhhfOBu6cHDBk3yGJ1uawBE=
+=======
+			5ikEhPJBZU3Y3Me7cC/BRsaFaCoEiOLOl18AzY5TOd0=
+>>>>>>> 08ecc4cce6cf51eef8db0591c8622f4faf709b83
 			</data>
 		</dict>
 		<key>Modules/GridKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< HEAD
 			Z399XDFNLur2QQkvFnmMqCfuEF331dCvPzbBa1uRrtU=
+=======
+			98luxkam9PESbeg60QdLYi1ru63ad/7dlu+oHuF8bq0=
+>>>>>>> 08ecc4cce6cf51eef8db0591c8622f4faf709b83
 			</data>
 		</dict>
 		<key>Modules/GridKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -91,28 +131,44 @@
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< HEAD
 			Z399XDFNLur2QQkvFnmMqCfuEF331dCvPzbBa1uRrtU=
+=======
+			98luxkam9PESbeg60QdLYi1ru63ad/7dlu+oHuF8bq0=
+>>>>>>> 08ecc4cce6cf51eef8db0591c8622f4faf709b83
 			</data>
 		</dict>
 		<key>Modules/GridKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< HEAD
 			bRXgS48WlcvsbmWD5Ox6fWu50YFe4dm/78HZ+eGFXOY=
+=======
+			pCCYB4ruXWmPDTtK11dNtcCWJXtahjGjnNsWwZDTLmQ=
+>>>>>>> 08ecc4cce6cf51eef8db0591c8622f4faf709b83
 			</data>
 		</dict>
 		<key>Modules/GridKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< HEAD
 			ZfMN/sBkOs7iGMfBH1lsWhhfOBu6cHDBk3yGJ1uawBE=
+=======
+			5ikEhPJBZU3Y3Me7cC/BRsaFaCoEiOLOl18AzY5TOd0=
+>>>>>>> 08ecc4cce6cf51eef8db0591c8622f4faf709b83
 			</data>
 		</dict>
 		<key>Modules/GridKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< HEAD
 			xKySKVx34sFi1t1jJJKyeuQMnkaPro83dlUaiQ8Lcv8=
+=======
+			hPlqFMzqq2uH4FWtvOqSRR+5B3Kb+x1ge25Ihz4F1Oc=
+>>>>>>> 08ecc4cce6cf51eef8db0591c8622f4faf709b83
 			</data>
 		</dict>
 		<key>Modules/GridKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -126,14 +182,22 @@
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< HEAD
 			xKySKVx34sFi1t1jJJKyeuQMnkaPro83dlUaiQ8Lcv8=
+=======
+			hPlqFMzqq2uH4FWtvOqSRR+5B3Kb+x1ge25Ihz4F1Oc=
+>>>>>>> 08ecc4cce6cf51eef8db0591c8622f4faf709b83
 			</data>
 		</dict>
 		<key>Modules/GridKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< HEAD
 			aEUkImHziA5zzgQkmDNarOoPjJ2rIESLPz4fOa0f5MI=
+=======
+			aSmX9I0wmzuXa8T3kCb+h8GFUf9GGT/7uhL8O2DFBZU=
+>>>>>>> 08ecc4cce6cf51eef8db0591c8622f4faf709b83
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
