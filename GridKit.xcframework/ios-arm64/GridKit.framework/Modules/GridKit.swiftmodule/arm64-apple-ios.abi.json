@@ -387,14 +387,22 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "IndexPath",
-                "printedName": "Foundation.IndexPath",
-                "usr": "s:10Foundation9IndexPathV"
+                "name": "Optional",
+                "printedName": "Foundation.IndexPath?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IndexPath",
+                    "printedName": "Foundation.IndexPath",
+                    "usr": "s:10Foundation9IndexPathV"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:7GridKit8GKCanvasC7getCell2atAA6GKCellCSg10Foundation9IndexPathV_tF",
-            "mangledName": "$s7GridKit8GKCanvasC7getCell2atAA6GKCellCSg10Foundation9IndexPathV_tF",
+            "usr": "s:7GridKit8GKCanvasC7getCell2atAA6GKCellCSg10Foundation9IndexPathVSg_tF",
+            "mangledName": "$s7GridKit8GKCanvasC7getCell2atAA6GKCellCSg10Foundation9IndexPathVSg_tF",
             "moduleName": "GridKit",
             "declAttributes": [
               "AccessControl",
@@ -437,6 +445,33 @@
             "declKind": "Func",
             "usr": "s:7GridKit8GKCanvasC7getCell5atRow6columnAA6GKCellCSgSi_SitF",
             "mangledName": "$s7GridKit8GKCanvasC7getCell5atRow6columnAA6GKCellCSgSi_SitF",
+            "moduleName": "GridKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getIndexPath",
+            "printedName": "getIndexPath(ofCell:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "IndexPath",
+                "printedName": "Foundation.IndexPath",
+                "usr": "s:10Foundation9IndexPathV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GKCell",
+                "printedName": "GridKit.GKCell",
+                "usr": "s:7GridKit6GKCellC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7GridKit8GKCanvasC12getIndexPath6ofCell10Foundation0eF0VAA6GKCellC_tF",
+            "mangledName": "$s7GridKit8GKCanvasC12getIndexPath6ofCell10Foundation0eF0VAA6GKCellC_tF",
             "moduleName": "GridKit",
             "declAttributes": [
               "AccessControl"
@@ -623,6 +658,108 @@
           },
           {
             "kind": "Function",
+            "name": "populateCells",
+            "printedName": "populateCells(at:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[(row: Swift.Int, col: Swift.Int)]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(row: Swift.Int, col: Swift.Int)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7GridKit8GKCanvasC13populateCells2atySaySi3row_Si3coltG_tF",
+            "mangledName": "$s7GridKit8GKCanvasC13populateCells2atySaySi3row_Si3coltG_tF",
+            "moduleName": "GridKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "populateCells",
+            "printedName": "populateCells(if:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Int, Swift.Int) -> Swift.Bool",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.Int, Swift.Int)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7GridKit8GKCanvasC13populateCells2ifySbSi_SitXE_tF",
+            "mangledName": "$s7GridKit8GKCanvasC13populateCells2ifySbSi_SitXE_tF",
+            "moduleName": "GridKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "insertCell",
             "printedName": "insertCell(atRow:column:file:line:)",
             "children": [
@@ -698,6 +835,108 @@
             "declAttributes": [
               "AccessControl",
               "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeCells",
+            "printedName": "removeCells(at:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[(row: Swift.Int, col: Swift.Int)]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(row: Swift.Int, col: Swift.Int)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7GridKit8GKCanvasC11removeCells2atySaySi3row_Si3coltG_tF",
+            "mangledName": "$s7GridKit8GKCanvasC11removeCells2atySaySi3row_Si3coltG_tF",
+            "moduleName": "GridKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeCells",
+            "printedName": "removeCells(if:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Int, Swift.Int) -> Swift.Bool",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.Int, Swift.Int)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7GridKit8GKCanvasC11removeCells2ifySbSi_SitXE_tF",
+            "mangledName": "$s7GridKit8GKCanvasC11removeCells2ifySbSi_SitXE_tF",
+            "moduleName": "GridKit",
+            "declAttributes": [
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -779,30 +1018,35 @@
                 "usr": "s:Si"
               },
               {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(inout GridKit.GKCell) -> ()",
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((inout GridKit.GKCell) -> ())?",
                 "children": [
                   {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "GKCell",
-                    "printedName": "GridKit.GKCell",
-                    "usr": "s:7GridKit6GKCellC"
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(inout GridKit.GKCell) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GKCell",
+                        "printedName": "GridKit.GKCell",
+                        "usr": "s:7GridKit6GKCellC"
+                      }
+                    ]
                   }
                 ],
-                "typeAttributes": [
-                  "noescape"
-                ]
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:7GridKit8GKCanvasC10updateCell5atRow6column0D0ySi_SiyAA6GKCellCzXEtF",
-            "mangledName": "$s7GridKit8GKCanvasC10updateCell5atRow6column0D0ySi_SiyAA6GKCellCzXEtF",
+            "usr": "s:7GridKit8GKCanvasC10updateCell5atRow6column0D0ySi_SiyAA6GKCellCzcSgtF",
+            "mangledName": "$s7GridKit8GKCanvasC10updateCell5atRow6column0D0ySi_SiyAA6GKCellCzcSgtF",
             "moduleName": "GridKit",
             "declAttributes": [
               "AccessControl",
@@ -1430,9 +1674,818 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "pathLineWidth",
+            "printedName": "pathLineWidth",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7GridKit12GKLayoutViewC13pathLineWidth14CoreFoundation7CGFloatVvp",
+            "mangledName": "$s7GridKit12GKLayoutViewC13pathLineWidth12CoreGraphics7CGFloatVvp",
+            "moduleName": "GridKit",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7GridKit12GKLayoutViewC13pathLineWidth14CoreFoundation7CGFloatVvg",
+                "mangledName": "$s7GridKit12GKLayoutViewC13pathLineWidth12CoreGraphics7CGFloatVvg",
+                "moduleName": "GridKit",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7GridKit12GKLayoutViewC13pathLineWidth14CoreFoundation7CGFloatVvs",
+                "mangledName": "$s7GridKit12GKLayoutViewC13pathLineWidth12CoreGraphics7CGFloatVvs",
+                "moduleName": "GridKit",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7GridKit12GKLayoutViewC13pathLineWidth14CoreFoundation7CGFloatVvM",
+                "mangledName": "$s7GridKit12GKLayoutViewC13pathLineWidth12CoreGraphics7CGFloatVvM",
+                "moduleName": "GridKit",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "pathStrokeColor",
+            "printedName": "pathStrokeColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7GridKit12GKLayoutViewC15pathStrokeColorSo7UIColorCSgvp",
+            "mangledName": "$s7GridKit12GKLayoutViewC15pathStrokeColorSo7UIColorCSgvp",
+            "moduleName": "GridKit",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7GridKit12GKLayoutViewC15pathStrokeColorSo7UIColorCSgvg",
+                "mangledName": "$s7GridKit12GKLayoutViewC15pathStrokeColorSo7UIColorCSgvg",
+                "moduleName": "GridKit",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7GridKit12GKLayoutViewC15pathStrokeColorSo7UIColorCSgvs",
+                "mangledName": "$s7GridKit12GKLayoutViewC15pathStrokeColorSo7UIColorCSgvs",
+                "moduleName": "GridKit",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7GridKit12GKLayoutViewC15pathStrokeColorSo7UIColorCSgvM",
+                "mangledName": "$s7GridKit12GKLayoutViewC15pathStrokeColorSo7UIColorCSgvM",
+                "moduleName": "GridKit",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "pathLayers",
+            "printedName": "pathLayers",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[QuartzCore.CAShapeLayer]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CAShapeLayer",
+                    "printedName": "QuartzCore.CAShapeLayer",
+                    "usr": "c:objc(cs)CAShapeLayer"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7GridKit12GKLayoutViewC10pathLayersSaySo12CAShapeLayerCGvp",
+            "mangledName": "$s7GridKit12GKLayoutViewC10pathLayersSaySo12CAShapeLayerCGvp",
+            "moduleName": "GridKit",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[QuartzCore.CAShapeLayer]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CAShapeLayer",
+                        "printedName": "QuartzCore.CAShapeLayer",
+                        "usr": "c:objc(cs)CAShapeLayer"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7GridKit12GKLayoutViewC10pathLayersSaySo12CAShapeLayerCGvg",
+                "mangledName": "$s7GridKit12GKLayoutViewC10pathLayersSaySo12CAShapeLayerCGvg",
+                "moduleName": "GridKit",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[QuartzCore.CAShapeLayer]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CAShapeLayer",
+                        "printedName": "QuartzCore.CAShapeLayer",
+                        "usr": "c:objc(cs)CAShapeLayer"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7GridKit12GKLayoutViewC10pathLayersSaySo12CAShapeLayerCGvs",
+                "mangledName": "$s7GridKit12GKLayoutViewC10pathLayersSaySo12CAShapeLayerCGvs",
+                "moduleName": "GridKit",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7GridKit12GKLayoutViewC10pathLayersSaySo12CAShapeLayerCGvM",
+                "mangledName": "$s7GridKit12GKLayoutViewC10pathLayersSaySo12CAShapeLayerCGvM",
+                "moduleName": "GridKit",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "tracedCells",
+            "printedName": "tracedCells",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Foundation.IndexPath]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IndexPath",
+                    "printedName": "Foundation.IndexPath",
+                    "usr": "s:10Foundation9IndexPathV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7GridKit12GKLayoutViewC11tracedCellsSay10Foundation9IndexPathVGvp",
+            "mangledName": "$s7GridKit12GKLayoutViewC11tracedCellsSay10Foundation9IndexPathVGvp",
+            "moduleName": "GridKit",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Foundation.IndexPath]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IndexPath",
+                        "printedName": "Foundation.IndexPath",
+                        "usr": "s:10Foundation9IndexPathV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7GridKit12GKLayoutViewC11tracedCellsSay10Foundation9IndexPathVGvg",
+                "mangledName": "$s7GridKit12GKLayoutViewC11tracedCellsSay10Foundation9IndexPathVGvg",
+                "moduleName": "GridKit",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Foundation.IndexPath]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IndexPath",
+                        "printedName": "Foundation.IndexPath",
+                        "usr": "s:10Foundation9IndexPathV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7GridKit12GKLayoutViewC11tracedCellsSay10Foundation9IndexPathVGvs",
+                "mangledName": "$s7GridKit12GKLayoutViewC11tracedCellsSay10Foundation9IndexPathVGvs",
+                "moduleName": "GridKit",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7GridKit12GKLayoutViewC11tracedCellsSay10Foundation9IndexPathVGvM",
+                "mangledName": "$s7GridKit12GKLayoutViewC11tracedCellsSay10Foundation9IndexPathVGvM",
+                "moduleName": "GridKit",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "updateCellOnTrace",
+            "printedName": "updateCellOnTrace",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((GridKit.GKCell) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(GridKit.GKCell) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GKCell",
+                        "printedName": "GridKit.GKCell",
+                        "usr": "s:7GridKit6GKCellC"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7GridKit12GKLayoutViewC17updateCellOnTraceyAA6GKCellCcSgvp",
+            "mangledName": "$s7GridKit12GKLayoutViewC17updateCellOnTraceyAA6GKCellCcSgvp",
+            "moduleName": "GridKit",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((GridKit.GKCell) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(GridKit.GKCell) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GKCell",
+                            "printedName": "GridKit.GKCell",
+                            "usr": "s:7GridKit6GKCellC"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7GridKit12GKLayoutViewC17updateCellOnTraceyAA6GKCellCcSgvg",
+                "mangledName": "$s7GridKit12GKLayoutViewC17updateCellOnTraceyAA6GKCellCcSgvg",
+                "moduleName": "GridKit",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((GridKit.GKCell) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(GridKit.GKCell) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GKCell",
+                            "printedName": "GridKit.GKCell",
+                            "usr": "s:7GridKit6GKCellC"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7GridKit12GKLayoutViewC17updateCellOnTraceyAA6GKCellCcSgvs",
+                "mangledName": "$s7GridKit12GKLayoutViewC17updateCellOnTraceyAA6GKCellCcSgvs",
+                "moduleName": "GridKit",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7GridKit12GKLayoutViewC17updateCellOnTraceyAA6GKCellCcSgvM",
+                "mangledName": "$s7GridKit12GKLayoutViewC17updateCellOnTraceyAA6GKCellCcSgvM",
+                "moduleName": "GridKit",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "updateCellOnTraceEnd",
+            "printedName": "updateCellOnTraceEnd",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((GridKit.GKCell) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(GridKit.GKCell) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GKCell",
+                        "printedName": "GridKit.GKCell",
+                        "usr": "s:7GridKit6GKCellC"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7GridKit12GKLayoutViewC20updateCellOnTraceEndyAA6GKCellCcSgvp",
+            "mangledName": "$s7GridKit12GKLayoutViewC20updateCellOnTraceEndyAA6GKCellCcSgvp",
+            "moduleName": "GridKit",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((GridKit.GKCell) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(GridKit.GKCell) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GKCell",
+                            "printedName": "GridKit.GKCell",
+                            "usr": "s:7GridKit6GKCellC"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7GridKit12GKLayoutViewC20updateCellOnTraceEndyAA6GKCellCcSgvg",
+                "mangledName": "$s7GridKit12GKLayoutViewC20updateCellOnTraceEndyAA6GKCellCcSgvg",
+                "moduleName": "GridKit",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((GridKit.GKCell) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(GridKit.GKCell) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GKCell",
+                            "printedName": "GridKit.GKCell",
+                            "usr": "s:7GridKit6GKCellC"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7GridKit12GKLayoutViewC20updateCellOnTraceEndyAA6GKCellCcSgvs",
+                "mangledName": "$s7GridKit12GKLayoutViewC20updateCellOnTraceEndyAA6GKCellCcSgvs",
+                "moduleName": "GridKit",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7GridKit12GKLayoutViewC20updateCellOnTraceEndyAA6GKCellCcSgvM",
+                "mangledName": "$s7GridKit12GKLayoutViewC20updateCellOnTraceEndyAA6GKCellCcSgvM",
+                "moduleName": "GridKit",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "allowPathDrawing",
+            "printedName": "allowPathDrawing",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7GridKit12GKLayoutViewC16allowPathDrawingSbvp",
+            "mangledName": "$s7GridKit12GKLayoutViewC16allowPathDrawingSbvp",
+            "moduleName": "GridKit",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7GridKit12GKLayoutViewC16allowPathDrawingSbvg",
+                "mangledName": "$s7GridKit12GKLayoutViewC16allowPathDrawingSbvg",
+                "moduleName": "GridKit",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7GridKit12GKLayoutViewC16allowPathDrawingSbvs",
+                "mangledName": "$s7GridKit12GKLayoutViewC16allowPathDrawingSbvs",
+                "moduleName": "GridKit",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7GridKit12GKLayoutViewC16allowPathDrawingSbvM",
+                "mangledName": "$s7GridKit12GKLayoutViewC16allowPathDrawingSbvM",
+                "moduleName": "GridKit",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(spec:in:)",
+            "printedName": "init(spec:in:masksToBounds:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1451,11 +2504,18 @@
                 "name": "UIView",
                 "printedName": "UIKit.UIView",
                 "usr": "c:objc(cs)UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:7GridKit12GKLayoutViewC4spec2inAcA6GKSpecV_So6UIViewCtcfc",
-            "mangledName": "$s7GridKit12GKLayoutViewC4spec2inAcA6GKSpecV_So6UIViewCtcfc",
+            "usr": "s:7GridKit12GKLayoutViewC4spec2in13masksToBoundsAcA6GKSpecV_So6UIViewCSbtcfc",
+            "mangledName": "$s7GridKit12GKLayoutViewC4spec2in13masksToBoundsAcA6GKSpecV_So6UIViewCSbtcfc",
             "moduleName": "GridKit",
             "declAttributes": [
               "Preconcurrency",
@@ -1468,7 +2528,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(frame:spec:in:)",
+            "printedName": "init(frame:spec:in:masksToBounds:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1493,11 +2553,18 @@
                 "name": "UIView",
                 "printedName": "UIKit.UIView",
                 "usr": "c:objc(cs)UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:7GridKit12GKLayoutViewC5frame4spec2inACSo6CGRectV_AA6GKSpecVSo6UIViewCtcfc",
-            "mangledName": "$s7GridKit12GKLayoutViewC5frame4spec2inACSo6CGRectV_AA6GKSpecVSo6UIViewCtcfc",
+            "usr": "s:7GridKit12GKLayoutViewC5frame4spec2in13masksToBoundsACSo6CGRectV_AA6GKSpecVSo6UIViewCSbtcfc",
+            "mangledName": "$s7GridKit12GKLayoutViewC5frame4spec2in13masksToBoundsACSo6CGRectV_AA6GKSpecVSo6UIViewCSbtcfc",
             "moduleName": "GridKit",
             "declAttributes": [
               "Preconcurrency",
@@ -1550,6 +2617,228 @@
           },
           {
             "kind": "Function",
+            "name": "updateTracedCell",
+            "printedName": "updateTracedCell(atIndexPath:update:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "IndexPath",
+                "printedName": "Foundation.IndexPath",
+                "usr": "s:10Foundation9IndexPathV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((GridKit.GKCell) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(GridKit.GKCell) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GKCell",
+                        "printedName": "GridKit.GKCell",
+                        "usr": "s:7GridKit6GKCellC"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7GridKit12GKLayoutViewC16updateTracedCell11atIndexPath0E0y10Foundation0iJ0V_yAA6GKCellCcSgtF",
+            "mangledName": "$s7GridKit12GKLayoutViewC16updateTracedCell11atIndexPath0E0y10Foundation0iJ0V_yAA6GKCellCcSgtF",
+            "moduleName": "GridKit",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "touchesBegan",
+            "printedName": "touchesBegan(_:with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Set",
+                "printedName": "Swift.Set<UIKit.UITouch>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UITouch",
+                    "printedName": "UIKit.UITouch",
+                    "usr": "c:objc(cs)UITouch"
+                  }
+                ],
+                "usr": "s:Sh"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIEvent?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIEvent",
+                    "printedName": "UIKit.UIEvent",
+                    "usr": "c:objc(cs)UIEvent"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@GridKit@objc(cs)GKLayoutView(im)touchesBegan:withEvent:",
+            "mangledName": "$s7GridKit12GKLayoutViewC12touchesBegan_4withyShySo7UITouchCG_So7UIEventCSgtF",
+            "moduleName": "GridKit",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "touchesBegan:withEvent:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "touchesMoved",
+            "printedName": "touchesMoved(_:with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Set",
+                "printedName": "Swift.Set<UIKit.UITouch>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UITouch",
+                    "printedName": "UIKit.UITouch",
+                    "usr": "c:objc(cs)UITouch"
+                  }
+                ],
+                "usr": "s:Sh"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIEvent?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIEvent",
+                    "printedName": "UIKit.UIEvent",
+                    "usr": "c:objc(cs)UIEvent"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@GridKit@objc(cs)GKLayoutView(im)touchesMoved:withEvent:",
+            "mangledName": "$s7GridKit12GKLayoutViewC12touchesMoved_4withyShySo7UITouchCG_So7UIEventCSgtF",
+            "moduleName": "GridKit",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "touchesMoved:withEvent:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "touchesEnded",
+            "printedName": "touchesEnded(_:with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Set",
+                "printedName": "Swift.Set<UIKit.UITouch>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UITouch",
+                    "printedName": "UIKit.UITouch",
+                    "usr": "c:objc(cs)UITouch"
+                  }
+                ],
+                "usr": "s:Sh"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIEvent?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIEvent",
+                    "printedName": "UIKit.UIEvent",
+                    "usr": "c:objc(cs)UIEvent"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@GridKit@objc(cs)GKLayoutView(im)touchesEnded:withEvent:",
+            "mangledName": "$s7GridKit12GKLayoutViewC12touchesEnded_4withyShySo7UITouchCG_So7UIEventCSgtF",
+            "moduleName": "GridKit",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "touchesEnded:withEvent:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "resizeCanvas",
             "printedName": "resizeCanvas(to:)",
             "children": [
@@ -1591,6 +2880,252 @@
             "declKind": "Func",
             "usr": "s:7GridKit12GKLayoutViewC8populateyyF",
             "mangledName": "$s7GridKit12GKLayoutViewC8populateyyF",
+            "moduleName": "GridKit",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "populteCells",
+            "printedName": "populteCells(at:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[(row: Swift.Int, col: Swift.Int)]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(row: Swift.Int, col: Swift.Int)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7GridKit12GKLayoutViewC12populteCells2atySaySi3row_Si3coltG_tF",
+            "mangledName": "$s7GridKit12GKLayoutViewC12populteCells2atySaySi3row_Si3coltG_tF",
+            "moduleName": "GridKit",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "populateCells",
+            "printedName": "populateCells(if:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Int, Swift.Int) -> Swift.Bool",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.Int, Swift.Int)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7GridKit12GKLayoutViewC13populateCells2ifySbSi_SitXE_tF",
+            "mangledName": "$s7GridKit12GKLayoutViewC13populateCells2ifySbSi_SitXE_tF",
+            "moduleName": "GridKit",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeCell",
+            "printedName": "removeCell(atRow:column:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7GridKit12GKLayoutViewC10removeCell5atRow6columnySi_SitF",
+            "mangledName": "$s7GridKit12GKLayoutViewC10removeCell5atRow6columnySi_SitF",
+            "moduleName": "GridKit",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeCells",
+            "printedName": "removeCells(at:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[(row: Swift.Int, col: Swift.Int)]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(row: Swift.Int, col: Swift.Int)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7GridKit12GKLayoutViewC11removeCells2atySaySi3row_Si3coltG_tF",
+            "mangledName": "$s7GridKit12GKLayoutViewC11removeCells2atySaySi3row_Si3coltG_tF",
+            "moduleName": "GridKit",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeCells",
+            "printedName": "removeCells(if:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Int, Swift.Int) -> Swift.Bool",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.Int, Swift.Int)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7GridKit12GKLayoutViewC11removeCells2ifySbSi_SitXE_tF",
+            "mangledName": "$s7GridKit12GKLayoutViewC11removeCells2ifySbSi_SitXE_tF",
             "moduleName": "GridKit",
             "declAttributes": [
               "Preconcurrency",
@@ -3056,35 +4591,77 @@
     {
       "filePath": "\/Users\/devanshseth\/XCode Projects\/GridKit\/GridKit\/Sources\/GKCanvas.swift",
       "kind": "IntegerLiteral",
-      "offset": 1283,
+      "offset": 1281,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/devanshseth\/XCode Projects\/GridKit\/GridKit\/Sources\/GKCanvas.swift",
       "kind": "IntegerLiteral",
-      "offset": 1557,
+      "offset": 1555,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/devanshseth\/XCode Projects\/GridKit\/GridKit\/Sources\/GKCanvas.swift",
       "kind": "IntegerLiteral",
-      "offset": 1904,
+      "offset": 1902,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/devanshseth\/XCode Projects\/GridKit\/GridKit\/Sources\/GKCanvas.swift",
       "kind": "Dictionary",
-      "offset": 2038,
+      "offset": 2036,
       "length": 3,
       "value": "[]"
     },
     {
+      "filePath": "\/Users\/devanshseth\/XCode Projects\/GridKit\/GridKit\/Sources\/GKLayoutView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 475,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/devanshseth\/XCode Projects\/GridKit\/GridKit\/Sources\/GKLayoutView.swift",
+      "kind": "Array",
+      "offset": 576,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/devanshseth\/XCode Projects\/GridKit\/GridKit\/Sources\/GKLayoutView.swift",
+      "kind": "Array",
+      "offset": 621,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/devanshseth\/XCode Projects\/GridKit\/GridKit\/Sources\/GKLayoutView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 775,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/devanshseth\/XCode Projects\/GridKit\/GridKit\/Sources\/GKLayoutView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 937,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/devanshseth\/XCode Projects\/GridKit\/GridKit\/Sources\/GKLayoutView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1130,
+      "length": 4,
+      "value": "true"
+    },
+    {
       "filePath": "\/Users\/devanshseth\/XCode Projects\/GridKit\/GridKit\/Sources\/GKSpec.swift",
       "kind": "IntegerLiteral",
-      "offset": 1026,
+      "offset": 1022,
       "length": 1,
       "value": "0"
     }

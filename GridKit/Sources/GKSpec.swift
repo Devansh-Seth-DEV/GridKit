@@ -9,18 +9,26 @@ import Foundation
 import UIKit
 
 public struct GKSpec {
-    public var rows: Int        // Max Rows in a grid
-    public var columns: Int     // Max Columns in a grid
-    
-    public var cellSize: CGFloat    // Size of single cell(unit size), size is considers same for width and height
-    public var interCellInsets: CGFloat // Inter cell spacing
-    
-    public var cellColor: UIColor?      // Background color of cell
-    public var canvasColor: UIColor?    // Backgournd color of canvas
-    public var cellBorderWidth: CGFloat?    // Border width of cell
-    public var cellBorderColor: UIColor?    // Border color of cell
-    public var cellCornerRadius: CGFloat?   // Corner radius of cell
-    public var canvasCornerRadius: CGFloat? // Corner radius of canvas
+    /// Defines Maximun number of rows in a canvas
+    public var rows: Int
+    /// Defines Maximum number of columns in a canvas
+    public var columns: Int
+    /// Defines the size of a single cell in a canvas
+    public var cellSize: CGFloat
+    /// Defines the spacing between two cells in a canvas either horizontally or vertically, default is set to `0`
+    public var interCellInsets: CGFloat
+    /// Defines the backgound color of the cell, default is set to `tertiarySystemGroupedBackground` color
+    public var cellColor: UIColor?
+    /// Defines the background color of the canvas, default is set to `white`
+    public var canvasColor: UIColor?
+    /// Defines the border width of the cell in canvas, default is set to `nil`
+    public var cellBorderWidth: CGFloat?
+    /// Defines the border color of the cell in canvas, default is set to `black`
+    public var cellBorderColor: UIColor?
+    /// Defines the corner radius of a cell in canvas, default is set to `nil`
+    public var cellCornerRadius: CGFloat?
+    /// Defines the corner radius of canvas, deafult is set to `nil`
+    public var canvasCornerRadius: CGFloat?
     
     // Initializes the configuration for the grid
     public init(
@@ -58,12 +66,12 @@ public struct GKSpec {
         self.canvasCornerRadius = canvasCornerRadius
     }
     
-    // Computes the total grid width based on the cell size and spacing between the cells.
+    /// Computes the total grid width based on the cell size and spacing between the cells.
     public var canvasWidth: CGFloat {
         return (CGFloat(columns) * cellSize) + (CGFloat(columns - 1) * interCellInsets)
     }
 
-    // Computes the total grid height based on the cell size and spacing between the cells.
+    /// Computes the total grid height based on the cell size and spacing between the cells.
     public var canvasHeight: CGFloat {
         return (CGFloat(rows) * cellSize) + (CGFloat(rows - 1) * interCellInsets)
     }

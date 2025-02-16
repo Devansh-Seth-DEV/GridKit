@@ -19,5 +19,6 @@ DerivedData/
 *.xcodeproj
 
 #Framework files
+GridKit.xcframework/
 build_xcframework.sh
 archives/
