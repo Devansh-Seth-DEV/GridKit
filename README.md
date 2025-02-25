@@ -35,6 +35,9 @@ To integrate **GridKit** into your project, you can Embed and Link the Framework
 ### Structures
 - [GKSpec](#gkspec)
 
+### Getting Started
+- [How To Use](#how-to-use)
+<br>
 
 ## GKCell
 A Subclass of `UIView` representing a cell in the canvas
@@ -580,6 +583,7 @@ let gkspec = GKSpec(
 
 <br>
 Now as we've created the canvas specifications let's create `GKLayoutView` for our View Controller. By default canvas is placed at the center of superview
+
 ```swift
 override func viewDidLoad() {
   super.viewDidLoad()
@@ -592,12 +596,14 @@ override func viewDidLoad() {
 
 <br>
 Now we've created our GKLayoutView we can place cells in it, to place cells in it call `populate()` method and RUN the app
+
 ```swift
 gklayout.populate()
 ```
 
 <br>
 As you can see canvas gets filled with cells but what if you don't want all the cells, To get specific cells you can either use `populateCells` method or you can first fill the canvas then call `removeCells` method later on but it'll be time costly process as canvas first creates the cell and then removes the required cells so it is recommended to use `populateCells` for better performance
+
 ```swift
 // gklayout.populate()
 gklayout.populateCells(where: { (row, col) in
@@ -608,6 +614,7 @@ gklayout.populateCells(where: { (row, col) in
 
 <br>
 To update the cell on specific positions use `updateCells` method
+
 ```swift
 gklayout.updateCells(where: { (row, col) in
     return (col == 0 && row < 5)
@@ -618,12 +625,14 @@ gklayout.updateCells(where: { (row, col) in
 
 <br>
 To check how your canvas grid is looking you can add markers in your canvas by calling `displayMarkers()` method
+
 ```swift
 gklayout.canvas.displayMarkers()
 ```
 
 <br>
 To add a subview in the canvas at specific position in grid you can use `addSubview(atRow:column:view)` method
+
 ```swift
 let label = UILabel()
 label.text = "Hello"
@@ -646,6 +655,7 @@ gklayout.addSubview(atRow: 1, column: 2, view: label)
 
 <br>
 What if you want to add a subview in a specific cell? Here is how you can achieve that
+
 ```swift
 let label = UILabel()
 label.text = "Hello"
@@ -672,6 +682,7 @@ if let cell = self.gklayout.canvas.getCell(atRow: self.gkspec.rows-1, column: 0)
 <br>
 Easy Right!
 Now lets do something interesting, lets activate the drag and drop features in the cells
+
 ```swift
 // Activate the drag and drop
 gklayout.allowCellDragNDrop = true
@@ -692,6 +703,7 @@ gklayout.updateCells(where: { (row, col) in
 
 <br>
 To run specific task while droping the cell or detaching the cell you can set the properties `onCellDropped` and `onCellDetach`
+
 ```swift
 gklayout.onCellDropped = { (cell: GKCell, targetCell: GKCell) in
     cell.bounds.size.width -= 10
@@ -710,6 +722,7 @@ gklayout.onCellDetach = { (cell: GKCell, targetCell: GKCell) in
 
 <br>
 But still you may have found that you are not able to drop the cell in the empty space. To drop it in empty space activate `allowDropInEmptySpace`
+
 ```swift
 gklayout.allowDropInEmptySpace = true
 ```
@@ -718,6 +731,7 @@ gklayout.allowDropInEmptySpace = true
 <br>
 What if you want to connect two cells with a line as you move your fingers from one cell to another?
 You can achieve this too by activating `allowPathDrawing`
+
 ```swift
 gklayout.allowPathDrawing = true
 ```
@@ -726,6 +740,7 @@ gklayout.allowPathDrawing = true
 
 <br>
 You can update the cell while connecting the cells, to do this use `updateCellOnTrace` and `updateCellOnTraceEnd`
+
 ```swift
 gklayout.pathStrokeColor = .systemOrange
 gklayout.updateCellOnTrace = { (cell, touch, event) in
@@ -739,6 +754,7 @@ gklayout.updateCellOnTraceEnd = { (cell, touch, event) in
 
 <br>
 If you want to update the cell or perform certain action while clicking the cell you can set `didTapCell` handler to perform custom tasks. For this you'll have to first disable the `allowPathDrawing` property and also the drag and drop property
+
 ```swift
 // gklayout.allowPathDrawing = true
 // gklayout.allowCellDragNDrop = true
