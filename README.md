@@ -618,6 +618,7 @@ To add a subview in the canvas at specific position in grid you can use `addSubv
 ```swift
 let label = UILabel()
 label.text = "Hello"
+label.textAlignment = .center
 label.layer.borderColor = UIColor.systemOrange.cgColor
 label.layer.borderWidth = 1
 
@@ -626,7 +627,37 @@ gklayout.setSubviewSize(label, fromGridAt: (row: 0, col: 1), to: (row: 0, col: -
 
 // adding label in canvas at row 1, column 2
 gklayout.addSubview(atRow: 1, column: 2, view: label)
+
+// Now as you've added the label in the canvas try printing tag of label
+// You'll notice that a number is printed so that number denotes the index of that label where it is located
+// If you add another view at same row and column then that view also get's same tag
+// Tag is calculated by Row-Order Indexing
+// tagValue = (currentRow * totalNumberOfColumns) + currentColumn
 ```
+
+What if you want to add a view in a specific cell? Here is how you can achieve that
+```swift
+let label = UILabel()
+label.text = "Hello"
+label.textAlignment = .center
+
+if let cell = self.gklayout.canvas.getCell(atRow: self.gkspec.rows-1, column: 0) {
+    label.font = .systemFont(ofSize: UIFont.preferredFont(forTextStyle: .caption1).pointSize)
+    
+    // You'll have to manually set the size of the label using 'bounds' property
+    label.bounds.size = CGSize(width: cell.bounds.width-10, height: cell.bounds.height-10)
+    
+    // Setting the center of the label to the cell's center using 'bounds' property
+    // Using 'bounds' here because if we use cell's center it'll calculate from its parent's coordinate environment
+    label.center = CGPoint(x: cell.bounds.width/2, y: cell.bounds.height/2)
+    
+    cell.addSubview(label)
+    
+    // Now try printing the 'tag' value of label
+    // You'll get the same tag value as the cell's tag value
+}
+```
+> Note: If you want to set the size prefer use 'bounds' property and for the position prefer 'frame' property because 'bounds' take coordination system of its own environment while 'frame' takes coordinate system of its parent environment
 
 Easy Right!
 Now lets do something interesting, lets activate the drag and drop features in the cells
@@ -639,8 +670,8 @@ gklayout.allowCellDragNDrop = true
 gklayout.updateCells(where: { (row, col) in
     return (col == 0 && row < 5) || (row == 7)
 }, update: { cell in
-    if row == 7 { cell.dragable = true }    // Enable all the cells to be able to draged on row 7
-    else {                                  // Enable all the cells to be able to accept the drop where (col == 0 and row < 5)
+    if cell.row == 7 { cell.dragable = true }    // Enable all the cells to be able to draged on row 7
+    else {                                       // Enable all the cells to be able to accept the drop where (col == 0 and row < 5)
         cell.backgroundColor = .systemOrange
         cell.dropable = true
     }
@@ -650,17 +681,17 @@ gklayout.updateCells(where: { (row, col) in
 
 To run specific task while droping the cell or detaching the cell you can set the properties `onCellDropped` and `onCellDetach`
 ```swift
-gklayout.onCellDropped = { (dragedCell: GKCell, acceptorCell: GKCell) in
-    dragedCell.bounds.size.width = acceptorCell.bounds.width - 10
-    dragedCell.bounds.size.height = acceptorCell.bounds.height - 10
-    dragedCell.backgroundColor = UIColor(cgColor: acceptorCell.layer.borderColor!)
-    acceptorCell.backgroundColor = .white
+gklayout.onCellDropped = { (cell: GKCell, targetCell: GKCell) in
+    cell.bounds.size.width -= 10
+    cell.bounds.size.height -= 10
+    cell.backgroundColor = UIColor(cgColor: targetCell.layer.borderColor!)
+    targetCell.backgroundColor = .white
 }
 
-gklayout.onCellDetach = { (dragedCell: GKCell, acceptorCell: GKCell) in
-    dragedCell.bounds.size = self.gklayout.canvas.getCellSize()
-    acceptorCell.backgroundColor = dragedCell.backgroundColor
-    dragedCell.backgroundColor = .white
+gklayout.onCellDetach = { (cell: GKCell, targetCell: GKCell) in
+    cell.bounds.size = self.gklayout.canvas.getCellSize()
+    targetCell.backgroundColor = cell.backgroundColor
+    cell.backgroundColor = .white
 }
 ```
 > Now RUN the app and you'll be seeing a smooth animation while draging or droping the cells
