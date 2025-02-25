@@ -86,6 +86,7 @@ init(
   
 - **`var row: Int`** - Row at which cell is present in canvas
 
+<br>
 
 ## GKSpec
 
@@ -132,6 +133,7 @@ init(
 
 - **`var rows: Int`** - Defines Maximun number of rows in a canvas
 
+<br>
 
 ## GKCanvas
 
@@ -360,6 +362,7 @@ func updateCells(
 )
 ```
 
+<br>
 
 ## GKLayoutView
 
@@ -558,6 +561,7 @@ func updateTracedCell(
 )
 ```
 
+<br>
 
 ## How To Use
 
@@ -772,6 +776,8 @@ gklayout.didTapCell = { cell in
     }
 }
 ```
+
+<br>
 
 ## Demo GIFs
 <p align="center">
