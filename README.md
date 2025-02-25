@@ -578,6 +578,7 @@ let gkspec = GKSpec(
 )
 ```
 
+<br>
 Now as we've created the canvas specifications let's create `GKLayoutView` for our View Controller. By default canvas is placed at the center of superview
 ```swift
 override func viewDidLoad() {
@@ -589,11 +590,13 @@ override func viewDidLoad() {
 }
 ```
 
+<br>
 Now we've created our GKLayoutView we can place cells in it, to place cells in it call `populate()` method and RUN the app
 ```swift
 gklayout.populate()
 ```
 
+<br>
 As you can see canvas gets filled with cells but what if you don't want all the cells, To get specific cells you can either use `populateCells` method or you can first fill the canvas then call `removeCells` method later on but it'll be time costly process as canvas first creates the cell and then removes the required cells so it is recommended to use `populateCells` for better performance
 ```swift
 // gklayout.populate()
@@ -603,6 +606,7 @@ gklayout.populateCells(where: { (row, col) in
 ```
 > Now RUN the app, you'll see only the required cells are drawn which satisfy the condition
 
+<br>
 To update the cell on specific positions use `updateCells` method
 ```swift
 gklayout.updateCells(where: { (row, col) in
@@ -612,11 +616,13 @@ gklayout.updateCells(where: { (row, col) in
 })
 ```
 
+<br>
 To check how your canvas grid is looking you can add markers in your canvas by calling `displayMarkers()` method
 ```swift
 gklayout.canvas.displayMarkers()
 ```
 
+<br>
 To add a subview in the canvas at specific position in grid you can use `addSubview(atRow:column:view)` method
 ```swift
 let label = UILabel()
@@ -638,7 +644,8 @@ gklayout.addSubview(atRow: 1, column: 2, view: label)
 // tagValue = (currentRow * totalNumberOfColumns) + currentColumn
 ```
 
-What if you want to add a view in a specific cell? Here is how you can achieve that
+<br>
+What if you want to add a subview in a specific cell? Here is how you can achieve that
 ```swift
 let label = UILabel()
 label.text = "Hello"
@@ -662,6 +669,7 @@ if let cell = self.gklayout.canvas.getCell(atRow: self.gkspec.rows-1, column: 0)
 ```
 > Note: If you want to set the size prefer use 'bounds' property and for the position prefer 'frame' property because 'bounds' take coordination system of its own environment while 'frame' takes coordinate system of its parent environment
 
+<br>
 Easy Right!
 Now lets do something interesting, lets activate the drag and drop features in the cells
 ```swift
@@ -682,6 +690,7 @@ gklayout.updateCells(where: { (row, col) in
 ```
 > Now RUN the app and see you can drag and drop the cells
 
+<br>
 To run specific task while droping the cell or detaching the cell you can set the properties `onCellDropped` and `onCellDetach`
 ```swift
 gklayout.onCellDropped = { (cell: GKCell, targetCell: GKCell) in
@@ -699,12 +708,14 @@ gklayout.onCellDetach = { (cell: GKCell, targetCell: GKCell) in
 ```
 > Now RUN the app and you'll be seeing a smooth animation while draging or droping the cells
 
+<br>
 But still you may have found that you are not able to drop the cell in the empty space. To drop it in empty space activate `allowDropInEmptySpace`
 ```swift
 gklayout.allowDropInEmptySpace = true
 ```
 > Now you can drop the cells in empty space too
 
+<br>
 What if you want to connect two cells with a line as you move your fingers from one cell to another?
 You can achieve this too by activating `allowPathDrawing`
 ```swift
@@ -713,6 +724,7 @@ gklayout.allowPathDrawing = true
 > RUN the app and see you can now getting the track of cells in which you are touching them
 > NOTE: If allowPathDrawing is active, Drag and drop features will gets deactivated as you're already keeping track of you path
 
+<br>
 You can update the cell while connecting the cells, to do this use `updateCellOnTrace` and `updateCellOnTraceEnd`
 ```swift
 gklayout.pathStrokeColor = .systemOrange
@@ -725,6 +737,7 @@ gklayout.updateCellOnTraceEnd = { (cell, touch, event) in
 }
 ```
 
+<br>
 If you want to update the cell or perform certain action while clicking the cell you can set `didTapCell` handler to perform custom tasks. For this you'll have to first disable the `allowPathDrawing` property and also the drag and drop property
 ```swift
 // gklayout.allowPathDrawing = true

@@ -72,4 +72,9 @@ open class GKCell: UIView {
     required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override open func addSubview(_ view: UIView) {
+        super.addSubview(view)
+        view.tag = self.tag
+    }
 }
