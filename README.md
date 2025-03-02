@@ -11,20 +11,19 @@ GridKit is a flexible and customizable grid-based UI framework for iOS, designed
 
 ![Install Framework](https://img.shields.io/badge/Install-GridKit-brightgreen?style=for-the-badge)
 
-Install the framework
-```sh
-curl -sSL https://gist.githubusercontent.com/Devansh-Seth-DEV/c1ea5abd3272cd166d4bf0e10683a7a7/raw/0eb227eacc44373a6fb59c4e9ac49696015fdda9/gk_install.sh | bash
+### 📦 Installation via SPM
+
+1. Open Xcode > File > **Add Package Dependency**
+
+2. Enter:
+```arduino
+https://github.com/Devansh-Seth-DEV/GridKit.git
 ```
 
+3. Select version 1.0.0 and click **Add Package**.
 
-![Integrate Framework](https://img.shields.io/badge/Integrate-GridKit-brightgreen?style=for-the-badge)
-
-To integrate **GridKit** into your project, you can Embed and Link the Framework
-1. Select your project in Xcode.
-2. Go to the Target → General tab.
-3. Scroll down to Frameworks, Libraries, and Embedded Content.
-4. Click the + button and add **GridKit XCFramework**.
-5. Set Embed to "Embed & Sign".
+### 🔗 Binary Target:
+If you are manually downloading from [Releases](https://github.com/Devansh-Seth-DEV/GridKit/releases), extract `GridKit.xcframework.zip` and add it to your project.
 
 ## Topics
 ### Classes
