@@ -20,7 +20,7 @@ GridKit is a flexible and customizable grid-based UI framework for iOS, designed
 https://github.com/Devansh-Seth-DEV/GridKit.git
 ```
 
-3. Select version 1.0.0 and click **Add Package**.
+3. Select branch or version 1.0.0 and click **Add Package**.
 
 ### 🔗 Binary Target:
 If you are manually downloading from [Releases](https://github.com/Devansh-Seth-DEV/GridKit/releases), extract `GridKit.xcframework.zip` and add it to your project.
