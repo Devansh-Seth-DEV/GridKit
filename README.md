@@ -571,7 +571,7 @@ import GridKit
 
 
 let gkspec = GKSpec(
-    rows: 7,
+    rows: 8,
     columns: 8,
     cellSize: 40,
     interCellInsets: 2,
